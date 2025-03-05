@@ -12,16 +12,22 @@
 </head>
 
 <body>
+
+  <!--CLASSE FIXA DA PARTE SUPERIOR DO SITE-->
   <div class="top-container">
+
+    <!--LOGO DA PARTE SUPERIOR DO SITE-->
     <div class="logo-container">
       <a href="/segmentos">
         <img src="static/imagens/tvlar_motors.png" alt="TVLAR MOTORS" class="logo">
       </a>
     </div>
 
+    <!--BOTAO DE SIMULAR-->
     <div class="filial-container">
       <button class="btn" id="showCard4Button" onclick="mostrarCard4()">Simular</button>
 
+      <!--BOTAO DE SELECIONAR A FILIAL-->
       <select id="filialTipo" name="filialTipo">
         <option value="">Loja</option>
         {% for chave, valor in filiais.items() %}
@@ -31,14 +37,19 @@
       <input type="text" id="vendedor" value="{{ usuario }}" placeholder="Nome do Usuario" readonly>
     </div>
 
+    <!--BOTAO DE SAIR DA CONTA-->
     <div class="btn-container" id="btnContainer">
       <button class="btn" onclick="window.location.href='/'"> Logout </button>
     </div>
   </div>
 
+  <!--CLASSE DOS 3 CARDS FIXOS-->
   <div id="formContainer" class="form-container">
+
+    <!--CARD 1-->
     <div class="card" id="card1">
 
+      <!-- ORIGEM DA MOTO-->
       <label for="localizacaoMoto">ORIGEM DA MOTO</label>
       <select id="locMoto" name="locMoto">
         <option value="">Selecione</option>
@@ -47,6 +58,7 @@
         {% endfor %}
       </select>
 
+      <!--SELECIONAR A MOTO-->
       <label for="yahMotos">MOTOS YAMAHA</label>
       <select id="motos_yamaha" name="motos_yamaha">
         <option value="">Selecione</option>
@@ -55,13 +67,16 @@
         {% endfor %}
       </select>
 
+      <!--NOME DO CLIENTE-->
       <label for="cliente">CLIENTE</label>
       <input type="text" id="cliente" placeholder="Nome do Cliente">
 
+      <!--CPF DO CLIENTE-->
       <label for="cpfCliente">CPF</label>
       <input type="text" id="cpf" placeholder="CPF ou CNPJ do Cliente" maxlength="17" oninput="formatarDocumento(this);"
         onblur="validarDocumento();">
 
+      <!--FORMA DE PAGAMENTO (A VISTA, FINANCIADO, CARTO DE CREDITO)-->
       <label for="formaPagamento">FORMA DE PAGAMENTO</label>
       <select id="forma_pagamento" name="formas_pagamentos">
         <option value="">Selecione</option>
@@ -73,7 +88,10 @@
 
     </div>
 
+    <!--CARD 2 (APENAS PARA FINANCIADO)-->
     <div class="card disabled" id="card2">
+
+      <!--SELECIONAR O BANCO-->
       <label for="formaBanco">BANCO</label>
       <select id="forma_banco" name="bancos">
         <option value="">Selecione</option>
@@ -82,6 +100,7 @@
         {% endfor %}
       </select>
 
+      <!--RETORNO $ DO BANCO-->
       <label for="bancoRetorno">BANCO RETORNO</label>
       <select id="banco_retorno" name="banco_retornos">
         <option value="">Selecione</option>
@@ -90,22 +109,25 @@
         {% endfor %}
       </select>
 
+      <!--VALOR DO BEM (NF)-->
       <label for="precoNegociado">VALOR DO BEM</label>
       <input type="text" id="preco_negociado" placeholder="R$00,00" disabled>
+
+      <!--ENTRADA BONIFICADA (FICTICIA)-->
       <label for="entradaBonificada">ENTRADA BONIFICADA</label>
       <input type="text" id="entrada_bonificada" placeholder="R$00,00" disabled>
-
     </div>
 
+    <!--CARD 3-->
     <div class="card disabled" id="card3">
 
+      <!--SERA ALTERADO DE ENTRADA REAL PARA VALOR DO BEM, DEPENDENDO DA ESCOLHA DA FORMA DE PAGAMENTO-->
       <span id="entradaAlter"
         style="text-align: left; font-weight: bold; color: rgb(255, 255, 255); font-size: 0.9rem;"></span>
-
       <input type="text" id="entrada_real" placeholder="R$00,00" disabled>
 
-      <div id="campoParcelas"
-        style="text-align: left; font-weight: bold; color: rgb(255, 255, 255); font-size: 0.9rem; display: none;">
+      <!--ESSE CAMPO APARECERAR SOMENTE SE FORMAPAGAMENTO == CARTAO DE CRÉDITO-->
+      <div id=style="text-align: left; font-weight: bold; color: rgb(255, 255, 255); font-size: 0.9rem; display: none;">
         <label for="parcelas" style="margin-bottom: 10px;">QTD. DE PARCELAS</label>
         <select id="parcelas" name="parcelas">
           {% for chave, valor in taxas.items() %}
@@ -114,24 +136,28 @@
         </select>
       </div>
 
+      <!--CUSTO E RECEITA DE EMPLACAMENTO-->
       <div class="box-container">
         <label for="emplacamento" style="margin-right: 5px;">EMPLACAMENTO</label>
         <input type="checkbox" id="enableEmplacamento" onclick="toggleEmplacamento()" style="margin-left: -2px;">
       </div>
       <input type="text" id="retorno_emplacamento" placeholder="R$00,00" disabled>
 
+      <!--CUSTO E RECEITA DE FRETE-->
       <div class="box-container">
         <label for="frete" style="margin-right: 5px;">FRETE</label>
         <input type="checkbox" id="enableFrete" onclick="toggleFrete()">
       </div>
       <input type="text" id="retorno_frete" placeholder="R$00,00" disabled>
 
+      <!--VALOR DOS ACESSORIOS VENDIDOS-->
       <div class="box-container">
         <label for="acessorio" style="margin-right: 5px;">ACESSÓRIOS VENDIDOS</label>
         <input type="checkbox" id="enableAcessorio" onclick="toggleEmplacamento()">
       </div>
       <input type="text" id="retorno_acessorio" placeholder="R$00,00" disabled>
 
+      <!--BINDE-->
       <div class="box-container">
         <label for="brinde" style="margin-right: 5px;">BRINDE</label>
         <input type="checkbox" id="enableBrinde" onclick="toggleEmplacamento()">
@@ -140,15 +166,17 @@
     </div>
   </div>
 
+  <!--CARD 4 (CARD DE RESULTADOS)-->
   <div id="card4" style="display: none; margin-left: -15px">
+
+    <!--TITULO DO CARD 4-->
     <p style="text-align: center;"><strong>RELATÓRIO - </strong> <span id="mensagemFilial"
         style="text-transform: uppercase;"></span></p>
 
-
+    <!--1ª CAIXA-->
     <div id="caixa_destacada1" class="caixa-destacada">
       <p id="valor_venda_real"></p>
       <p id="parcelas_taxa"></p>
-
       <p><strong>Custo da Moto:</strong> <span id="custo_produto"></span></p>
       <p><strong>Margem Bruta:</strong> <span id="margem_bruta"></span></p>
     </div>
@@ -157,7 +185,10 @@
         id="revisao"></span></p>
     <p style="height: 1px;"></p>-->
 
+    <!--TITULO DA 2ª CAIXA-->
     <p style="text-align: center; margin-left: -15px"><strong>DESPESAS</strong></p>
+
+    <!--2ª CAIXA-->
     <div id="caixa_destacada2" class="caixa-destacada">
       <p><strong>Emplacamento Custo:</strong> <span id="custo_emplacamento"></span></p>
       <p><strong>Frete Custo:</strong> <span id="custo_frete"></span></p>
@@ -168,7 +199,10 @@
       <p><strong>Total de Despesas:</strong> <span id="resultado_despesas"></span></p>
     </div>
 
+    <!--TITULO DA 3ª CAIXA-->
     <p style="text-align: center; margin-left: -15px;"><strong>RECEITAS</strong></p>
+
+    <!--3ª CAIXA-->
     <div id="caixa_destacada3" class="caixa-destacada">
       <p id="resultado_banco"> </p>
       <p><strong>Emplacamento Receita:</strong> <span id="receita_emplacamento"></span></p>
@@ -177,6 +211,10 @@
       <p><strong>Total de Receitas:</strong> <span id="resultado_receitas"></span></p>
     </div>
 
+    <!-- TITULO DA 4ª CAIXA-->
+    <p style="text-align: center; margin-left: -15px;"><strong>RESULTADOS</strong></p>
+
+    <!--4ª CAIXA-->
     <div id="caixa_destacada4" class="caixa-destacada">
       <p><strong>Margem Líquida:</strong> <span id="resultado_liquido"></span></p>
       <p><strong>Comissão Aproximada:</strong> <span id="comissao"></span></p>

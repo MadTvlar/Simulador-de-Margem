@@ -4,6 +4,7 @@ usuarios = {
     "admin": "admin123",
     "gab_jogador": "admin",
     "nayara_serrao": "admin123",
+    "gessiane_oliveira": "212413",
     
 
 
@@ -19,18 +20,40 @@ usuarios = {
 
     #Cidade Nova
     "darcylane_silva": "170203",
+    "solange_martins": "sol@123",
+    "helen_guedes": "@Helen123!",
+    "dianne_vilaco": "1993",
+    "jefferson_thomas": "TH@2025",
+    "ana_silva": "Crm@123ana",
+    "elyson_nunes": "Elyson91***",
+    "liliane_farias": "Tvlar3434",
+    "manasses_natario": "Tvlar0204",
+    "vitorhugo_morais": "010203TV",
+
     
     #Max Teixeira
     "lara_bastos": "090807",
 
     #Compensa
-    "larissa_martins": "101609",
+    "mateus_freitas": "Juliana@25",
+    "larissa_pereira": "123321",
+    "ane_emanuela": "Tvl@r234",
+    "juliete_santos": "Yamaha2804@",
+    "marcos_viana": "Viana@25",
+
     
     #Cachoeirinha
     "iara_cabral": "220621",
+    "orielves_gomes": "364656",
+    "maria_paredes": "",
+    "richardson_costa": "362516",
+    "kellen_paredes": "253545",
 
     #Coari
     "stefani_souza": "052025",
+
+    #Itacoatiara
+    "dayane_muller": "181223",
 
     #Humaita
     "guilherme_guacebe": "fabrisg1517",
@@ -38,6 +61,11 @@ usuarios = {
     #Manacapuru
     "jamila_fernandes": "Jamila123@",
     "paulo_lemos": "241428",
+    "raimundo_silva": "245404",
+
+    #Tefé
+    "larissa_martins": "101609",
+
 
     #Nautica
     "waleria_rodrigues": "636153",

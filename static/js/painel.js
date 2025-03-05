@@ -11,11 +11,10 @@ function verificarCamposCard1() {
     var formaPagamento = this.value;
     var campoParcelas = document.getElementById('campoParcelas');
 
-    // Verifica se a opção selecionada é 'Cartão de Crédito'
     if (formaPagamento === 'cartao') {
-      campoParcelas.style.display = 'block'; // Exibe o campo de parcelas
+      campoParcelas.style.display = 'block';
     } else {
-      campoParcelas.style.display = 'none'; // Oculta o campo de parcelas
+      campoParcelas.style.display = 'none';
     }
   });
 
@@ -235,9 +234,6 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
 
   const valorVendaReal = precoNegociado - entradaBonificada;
 
-  //document.getElementById('valor_venda_real').innerText = `Valor de Venda Real: ${'.'.repeat(81)} R$ ${valorVendaReal.toFixed(2).replace('.', ',')}`;
-
-
   document.getElementById('card4').style.display = 'block';
 
   const checkboxAcessorio = document.getElementById('enableAcessorio');
@@ -276,7 +272,10 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
       if (data.error) {
         alert(data.error);
       } else {
+
+        //MENSAGEM ONDE APARECE RELATORIO  - NOME DA FILIAL
         document.getElementById('mensagemFilial').innerText = `${filialSelecionada}`;
+
         if (filiaisManaus.includes(filialSelecionada)) {
           $('#card4').show();
           $('#pps').text(`${'.'.repeat(80)} R$ ${data.manaus_pps.toFixed(2).replace('.', ',')}`);
@@ -306,23 +305,6 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
         document.getElementById('resultado_banco').innerText = '';
         document.getElementById('custo_emplacamento').innerText = '';
         document.getElementById('receita_emplacamento').innerText = '';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         if (formaPagamento === "financiado") {
           margem_bruta = valorVendaReal - custoProduto;
@@ -357,7 +339,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
 
           } else {
             resultadoBanco = 0;
-            document.getElementById('resultado_banco').innerText = `Retorno do Banco: ${'.'.repeat(84)} R$ ${resultadoBanco.toFixed(2).replace('.', ',')}`;
+            document.getElementById('resultado_banco').innerText = ''
           }
 
         } if (formaPagamento === "a_vista") {
@@ -456,6 +438,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
         }
 
 
+        //RESULTADOS SE A FORMA DE PAGAMENTO FOR DIFERENTE DE CARTAO DE CREDITO
         if (formaPagamento !== "cartao") {
           resultRevisao = data.revisao
 

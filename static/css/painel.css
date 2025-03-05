@@ -295,6 +295,7 @@ body {
   border: 2px solid #ffffff;
   padding: 10px 20px 20px 20px;
   margin-top: 20px;
+  margin-bottom: 30px;
   background-color: transparent;
   width: 91%;
   margin-left: -15px;
@@ -317,7 +318,6 @@ body {
   @page {
     size: auto;
     margin: 0.5cm;
-    /* Margem pequena para garantir mais espaço */
   }
 
   body {
@@ -327,21 +327,16 @@ body {
     height: auto;
     overflow: hidden;
     font-size: 0.8rem;
-    /* Aumentar o tamanho da fonte geral */
     transform: scale(1);
-    /* Aumentar a escala da página para 90% */
     transform-origin: top left;
-    /* A escala será aplicada a partir do canto superior esquerdo */
   }
 
-  /* Garantir que a transformação seja aplicada a todos os elementos dentro da página */
   .form-container,
   .top-container,
   .filial-container,
   .card,
   #card4 {
     transform: scale(1);
-    /* Aumentar a escala dos containers e cards para 90% */
     transform-origin: top left;
   }
 
@@ -355,17 +350,14 @@ body {
 
   .card {
     width: 32%;
-    /* Aumentar a largura dos cards para 32% */
     box-shadow: none;
     border: 1px solid #000;
     padding: 6px;
     font-size: 0.85rem;
-    /* Aumentar o tamanho da fonte dentro dos cards */
     page-break-before: avoid;
     page-break-after: avoid;
   }
 
-  /* Ajustes nos elementos internos do card */
   .card h1,
   .card h2,
   .card h3,
@@ -373,7 +365,6 @@ body {
   .card p,
   .card span {
     font-size: 0.85rem;
-    /* Aumentar o tamanho da fonte */
     margin-bottom: 6px;
   }
 
@@ -381,14 +372,12 @@ body {
   .card select,
   .card button {
     font-size: 0.85rem;
-    /* Aumentar a fonte de inputs e botões */
     padding: 8px 14px;
     margin: 4px 0;
   }
 
   #card4 {
     width: 92%;
-    /* Aumentar a largura do card4 para 92% */
     box-shadow: none;
     border: 1px solid #000;
     padding: 2px;
@@ -409,7 +398,6 @@ body {
     justify-content: space-between;
     width: 100%;
     font-size: 0.85rem;
-    /* Aumentar a fonte nos elementos do topo */
   }
 
   .filial-container {
@@ -433,15 +421,12 @@ body {
 
   .footer {
     display: none;
-    /* Esconder o rodapé na impressão */
   }
 
-  /* Garantir que os elementos se ajustem sem quebrar */
   * {
     page-break-inside: avoid;
   }
 
-  /* Garantir que o conteúdo caiba corretamente */
   html,
   body {
     width: 100%;
@@ -459,20 +444,17 @@ body {
     page-break-after: avoid;
   }
 
-  /* Ajuste específico para os inputs de texto no card3 */
   #card3 input {
     font-size: 0.85rem;
     padding: 8px 14px;
     margin: 4px 0;
   }
 
-  /* Ajustar o tamanho do botão */
   .btn {
     font-size: 0.85rem;
     padding: 8px 14px;
   }
 
-  /* Ajustar os elementos de caixa destacada dentro do card4 */
   .caixa-destacada {
     font-size: 0.8rem;
     margin: 4px 0;
@@ -482,7 +464,6 @@ body {
     margin-bottom: 4px;
   }
 
-  /* Ajustar os elementos de caixa de seleção */
   #campoParcelas select {
     font-size: 0.85rem;
     padding: 8px;
