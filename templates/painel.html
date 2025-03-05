@@ -127,7 +127,8 @@
       <input type="text" id="entrada_real" placeholder="R$00,00" disabled>
 
       <!--ESSE CAMPO APARECERAR SOMENTE SE FORMAPAGAMENTO == CARTAO DE CRÉDITO-->
-      <div id=style="text-align: left; font-weight: bold; color: rgb(255, 255, 255); font-size: 0.9rem; display: none;">
+      <div id="campoParcelas"
+        style="text-align: left; font-weight: bold; color: rgb(255, 255, 255); font-size: 0.9rem; display: none;">
         <label for="parcelas" style="margin-bottom: 10px;">QTD. DE PARCELAS</label>
         <select id="parcelas" name="parcelas">
           {% for chave, valor in taxas.items() %}
@@ -143,12 +144,39 @@
       </div>
       <input type="text" id="retorno_emplacamento" placeholder="R$00,00" disabled>
 
+
+
+
+      <div id="freteManaus"
+        style="text-align: left; font-weight: bold; color: rgb(255, 255, 255); font-size: 0.9rem; display: none;">
+
+        <label for="freteDespesas" style="margin-bottom: 10px;">FRETE DESPESA</label>
+        <input type="text" id="frete_despesa" placeholder="R$00,00" disabled>
+
+
+        <label for="freteReceitas" style="margin-bottom: 10px;">FRETE RECEITA</label>
+        <input type="text" id="frete_receita" placeholder="R$00,00" disabled>
+      </div>
+
+
+
+
+
+
+
+
+
       <!--CUSTO E RECEITA DE FRETE-->
       <div class="box-container">
         <label for="frete" style="margin-right: 5px;">FRETE</label>
         <input type="checkbox" id="enableFrete" onclick="toggleFrete()">
       </div>
       <input type="text" id="retorno_frete" placeholder="R$00,00" disabled>
+
+
+
+
+
 
       <!--VALOR DOS ACESSORIOS VENDIDOS-->
       <div class="box-container">
