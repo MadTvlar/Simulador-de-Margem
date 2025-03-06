@@ -147,15 +147,27 @@
 
 
 
+
+
+
+      <!--VARIAVEIS DO FRETE SE FILIAL DE MANAUS FOR SELECIONADA-->
       <div id="freteManaus"
         style="text-align: left; font-weight: bold; color: rgb(255, 255, 255); font-size: 0.9rem; display: none;">
 
         <label for="freteDespesas" style="margin-bottom: 10px;">FRETE DESPESA</label>
-        <input type="text" id="frete_despesa" placeholder="R$00,00" disabled>
+        <input type="text" id="frete_despesa" name="frete_despesa" placeholder="R$00,00" style="width: 250px;">
 
 
         <label for="freteReceitas" style="margin-bottom: 10px;">FRETE RECEITA</label>
-        <input type="text" id="frete_receita" placeholder="R$00,00" disabled>
+        <input type="text" id="frete_receita_cap" name="frete_receita" placeholder="R$00,00" style="width: 250px;">
+      </div>
+
+      <!--VARIAVEIS DO FRETE SE FILIAL DE INTERIOR FOR SELECIONADO-->
+      <div id="freteInterior"
+        style="text-align: left; font-weight: bold; color: rgb(255, 255, 255); font-size: 0.9rem; display: none;">
+
+        <label for="freteReceita" style="margin-bottom: 10px;">FRETE RECEITA</label>
+        <input type="text" id="frete_receita_int" name="frete_receita" placeholder="R$00,00" style="width: 250px;">
       </div>
 
 
@@ -164,14 +176,6 @@
 
 
 
-
-
-      <!--CUSTO E RECEITA DE FRETE-->
-      <div class="box-container">
-        <label for="frete" style="margin-right: 5px;">FRETE</label>
-        <input type="checkbox" id="enableFrete" onclick="toggleFrete()">
-      </div>
-      <input type="text" id="retorno_frete" placeholder="R$00,00" disabled>
 
 
 

@@ -376,6 +376,32 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
         # GERAL
         'revisao': 400,
     },
+
+    'NMAX Connected 160 ABS SE 24-24': { #ÚLTIMA ALTERAÇÃO: 18/02/2025
+        # MANAUS
+        'manaus_custo_produto': 18518.07,
+        'manaus_pps': 21761,
+
+        # INTERIOR
+        'interior_custo_produto': 19098.82,
+        'interior_pps': 22200,
+
+        # GERAL
+        'revisao': 400,
+    },
+
+    'XMAX ABS Connected 25-25': { #ÚLTIMA ALTERAÇÃO: 06/03/2025
+        # MANAUS
+        'manaus_custo_produto': 31398.64,
+        'manaus_pps': 0,
+
+        # INTERIOR
+        'interior_custo_produto': 32968.57,
+        'interior_pps': 0,
+
+        # GERAL
+        'revisao': 400,
+    },
     
     'XTZ Crosser 150 S 24-24': { #ÚLTIMA ALTERAÇÃO: 18/02/2025
         # MANAUS
@@ -429,17 +455,6 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
         'revisao': 0,
     },
 
-    'NMAX Connected 160 ABS SE 24-24': { #ÚLTIMA ALTERAÇÃO: 18/02/2025
-        # MANAUS
-        'manaus_custo_produto': 18518.07,
-        'manaus_pps': 21761,
-
-        # INTERIOR
-        'interior_custo_produto': 19098.82,
-        'interior_pps': 22200,
-
-        # GERAL
-        'revisao': 400,
-    },
+    
 
 }

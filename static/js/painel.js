@@ -18,6 +18,19 @@ function verificarCamposCard1() {
     }
   });
 
+  var filiaisManaus = ["Cachoeirinha", "Compensa", "Cidade Nova", "Max Teixeira", "Grande Circular"];
+  var freteManaus = document.getElementById('freteManaus');
+  var freteInterior = document.getElementById('freteInterior');
+  if (filiaisManaus.includes(filialSelecionada)) {
+    freteManaus.style.display = "block";
+    freteInterior.style.display = "none";
+
+  } else {
+    freteManaus.style.display = "none";
+    freteInterior.style.display = "block";
+  }
+
+
   if (filialSelecionada) {
     document.getElementById('card1').classList.remove('suspended');
     document.getElementById('card1').classList.add('active');
@@ -201,8 +214,13 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
   let entradaBonificada = 0;
   let entradaReal = 0;
   let custoProduto = 0;
+
   let despesaFrete = 0;
-  let retornoFrete = 0;
+  let receitaFreteCap = 0;
+  let receitaFreteInt = 0;
+  let receitaFrete = 0;
+
+
   let retornoEmplacamento = 0;
   let retornoAcessorio = 0;
   let retornoBrinde = 0;
@@ -221,8 +239,12 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
       entradaBonificada = valor;
     } else if (campo.id === 'entrada_real') {
       entradaReal = valor;
-    } else if (campo.id === 'retorno_frete') {
-      retornoFrete = valor;
+    } else if (campo.id === 'frete_receita_cap') {
+      receitaFreteCap = valor;
+    } else if (campo.id === 'frete_receita_int') {
+      receitaFreteInt = valor;
+    } else if (campo.id === 'frete_despesa') {
+      despesaFrete = valor;
     } else if (campo.id === 'retorno_emplacamento') {
       retornoEmplacamento = valor;
     } else if (campo.id === 'retorno_acessorio') {
@@ -241,7 +263,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
   if (checkboxAcessorio.checked) {
     const receitaAcessorio = retornoAcessorio;
     const custoAcessorio = retornoAcessorio * 0.7;
-    document.getElementById('receita_acessorio').innerText = `Frete Receita:${'.'.repeat(82)} R$ ${receitaAcessorio.toFixed(2).replace('.', ',')}`;
+    document.getElementById('receita_acessorio').innerText = `Acessórios Receita:${'.'.repeat(84)} R$ ${receitaAcessorio.toFixed(2).replace('.', ',')}`;
     document.getElementById('custo_acessorio').innerText = `Acessórios Custo:${'.'.repeat(86)} R$ -${custoAcessorio.toFixed(2).replace('.', ',')}`;
 
   } else {
@@ -279,14 +301,16 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
         if (filiaisManaus.includes(filialSelecionada)) {
           $('#card4').show();
           $('#pps').text(`${'.'.repeat(80)} R$ ${data.manaus_pps.toFixed(2).replace('.', ',')}`);
-          const checkboxFrete = document.getElementById('enableFrete');
-          if (checkboxFrete.checked) {
-            despesaFrete = 600;
-          }
+          receitaFrete = receitaFreteCap;
+
+
+
 
         } else {
           $('#pps').text(`${'.'.repeat(80)} R$ ${data.interior_pps.toFixed(2).replace('.', ',')}`);
           despesaFrete = 600;
+          receitaFrete = receitaFreteInt;
+
         }
 
         const localizacaomoto = document.getElementById('locMoto').value.trim();
@@ -397,7 +421,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
             const totalDespesas = despOpeFinMkt + resultBrinde + despEmplacamento + despesaFrete + retornoAcessorio * 0.7 + taxaCartao;
             document.getElementById('resultado_despesas').innerText = `${'.'.repeat(84)} R$ -${totalDespesas.toFixed(2).replace('.', ',')}`;
 
-            const totalReceitas = retornoAcessorio + resultadoBanco + retornoEmplacamento + retornoFrete;
+            const totalReceitas = retornoAcessorio + resultadoBanco + retornoEmplacamento + receitaFrete;
             document.getElementById('resultado_receitas').innerText = `${'.'.repeat(86)} R$ ${totalReceitas.toFixed(2).replace('.', ',')}`;
 
             const margemLiquida = margemBruta - totalDespesas + totalReceitas;
@@ -416,7 +440,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
         $('#revisao').text(`${'.'.repeat(3)} R$ ${data.revisao.toFixed(2).replace('.', ',')}`);
 
         document.getElementById('custo_frete').innerText = `${'.'.repeat(96)} R$ -${despesaFrete.toFixed(2).replace('.', ',')}`;
-        document.getElementById('receita_frete').innerText = `${'.'.repeat(93)} R$ ${retornoFrete.toFixed(2).replace('.', ',')}`;
+        document.getElementById('receita_frete').innerText = `${'.'.repeat(93)} R$ ${receitaFrete.toFixed(2).replace('.', ',')}`;
 
 
         const checkboxEmplacamento = document.getElementById('enableEmplacamento');
@@ -448,7 +472,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
           const totalDespesas = despOpeFinMkt + resultBrinde + despEmplacamento + despesaFrete + retornoAcessorio * 0.7;
           document.getElementById('resultado_despesas').innerText = `${'.'.repeat(84)} R$ -${totalDespesas.toFixed(2).replace('.', ',')}`;
 
-          const totalReceitas = retornoAcessorio + resultadoBanco + retornoEmplacamento + retornoFrete;
+          const totalReceitas = retornoAcessorio + resultadoBanco + retornoEmplacamento + receitaFrete;
           document.getElementById('resultado_receitas').innerText = `${'.'.repeat(86)} R$ ${totalReceitas.toFixed(2).replace('.', ',')}`;
 
           const margemLiquida = margemBruta - totalDespesas + totalReceitas;

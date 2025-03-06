@@ -20,10 +20,13 @@ usuarios = {
 
     #Cidade Nova
     "darcylane_silva": "170203",
+    "jander_souza": "488469",
+    "kaic_correa": "Kaik2470@",
+    "ada_monteiro": "Samuel@09",
     "solange_martins": "sol@123",
     "helen_guedes": "@Helen123!",
     "dianne_vilaco": "1993",
-    "jefferson_thomas": "TH@2025",
+    "jefferson_thomas": "Th@2025",
     "ana_silva": "Crm@123ana",
     "elyson_nunes": "Elyson91***",
     "liliane_farias": "Tvlar3434",
@@ -59,7 +62,7 @@ usuarios = {
     "guilherme_guacebe": "fabrisg1517",
 
     #Manacapuru
-    "jamila_fernandes": "Jamila123@",
+    "jamilla_fernandes": "Jamila123@",
     "paulo_lemos": "241428",
     "raimundo_silva": "245404",
 
