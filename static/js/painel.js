@@ -231,7 +231,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
 
 
   camposCard.forEach(campo => {
-    const valor = parseFloat(campo.value.replace('R$', '').replace(',', '.') || 0);
+    const valor = parseFloat(campo.value.replace('R$', '').replace('.', '').replace(',', '.') || 0);
 
     if (campo.id === 'preco_negociado') {
       precoNegociado = valor;

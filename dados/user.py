@@ -32,6 +32,8 @@ usuarios = {
     "liliane_farias": "Tvlar3434",
     "manasses_natario": "Tvlar0204",
     "vitorhugo_morais": "010203TV",
+    "yasmin_morais": "Morais2025@",
+    "juliana_bezerra": "211224",
 
     
     #Max Teixeira
