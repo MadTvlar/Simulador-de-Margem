@@ -403,6 +403,19 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
         'revisao': 400,
     },
 
+    'TT-R 230 25-25': { #ÚLTIMA ALTERAÇÃO: 18/02/2025
+        # MANAUS
+        'manaus_custo_produto': 17433.32,
+        'manaus_pps': 0,
+
+        # INTERIOR
+        'interior_custo_produto': 17433.32,
+        'interior_pps': 0,
+
+        # GERAL
+        'revisao': 0,
+    },
+
     'XMAX ABS Connected 25-25': { #ÚLTIMA ALTERAÇÃO: 06/03/2025
         # MANAUS
         'manaus_custo_produto': 31398.64,

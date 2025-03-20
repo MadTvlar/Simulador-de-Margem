@@ -211,6 +211,8 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
   let entradaBonificada = 0;
   let entradaReal = 0;
   let custoProduto = 0;
+
+
   let revisao = 0;
 
   let despesaFrete = 0;
@@ -433,7 +435,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
 
         const margemBruta = margem_bruta
         document.getElementById('margem_bruta').innerText = `${'.'.repeat(91)}  R$ ${margemBruta.toFixed(2).replace('.', ',')}`;
-        $('#revisao').text(`${'.'.repeat(3)} R$ ${data.revisao.toFixed(2).replace('.', ',')}`);
+
 
         document.getElementById('custo_frete').innerText = `${'.'.repeat(96)} R$ -${despesaFrete.toFixed(2).replace('.', ',')}`;
         document.getElementById('receita_frete').innerText = `${'.'.repeat(93)} R$ ${receitaFrete.toFixed(2).replace('.', ',')}`;
@@ -460,7 +462,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
 
         //RESULTADOS SE A FORMA DE PAGAMENTO FOR DIFERENTE DE CARTAO DE CREDITO
         if (formaPagamento !== "cartao") {
-          resultRevisao = data.revisao
+
 
           const despOpeFinMkt = valor_op * 0.06;
           document.getElementById('despesas_ope_fin_mkt').innerText = `${'.'.repeat(75)} R$ -${despOpeFinMkt.toFixed(2).replace('.', ',')}`;
