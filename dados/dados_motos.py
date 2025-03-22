@@ -494,6 +494,19 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
         'revisao': 0,
     },
 
+
+    'R3 ABS Connected 25-26': { #ÚLTIMA ALTERAÇÃO: 18/02/2025
+        # MANAUS
+        'manaus_custo_produto': 32310.31,
+        'manaus_pps': 0,
+
+        # INTERIOR
+        'interior_custo_produto': 33925.82,
+        'interior_pps': 0,
+
+        # GERAL
+        'revisao': 0,
+    },
     
 
 }
