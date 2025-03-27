@@ -58,6 +58,7 @@ usuarios = {
     "kellen_paredes": "253545",
 
     #Coari
+    "elianias_costa": "708619",
     "stefani_souza": "052025",
 
     #Itacoatiara
