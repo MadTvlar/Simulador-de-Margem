@@ -402,7 +402,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
             document.getElementById('margem_bruta').innerText = `${'.'.repeat(91)}  R$ ${margem_bruta.toFixed(2).replace('.', ',')}`;
 
             if (checkboxEmplacamento.checked) {
-              despEmplacamento = (valorVendaReal * 0.025) + 140.75 + 290 + 227.08;
+              despEmplacamento = (valorVendaReal * 0.0225) + 140.75 + 290 + 227.08;
               document.getElementById('custo_emplacamento').innerText = `${'.'.repeat(79)} R$ -${despEmplacamento.toFixed(2).replace('.', ',')}`;
               document.getElementById('receita_emplacamento').innerText = `${'.'.repeat(76)} R$ ${retornoEmplacamento.toFixed(2).replace('.', ',')}`;
             } else {
@@ -443,12 +443,12 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
 
         const checkboxEmplacamento = document.getElementById('enableEmplacamento');
         if (checkboxEmplacamento.checked && formaPagamento === "financiado") {
-          despEmplacamento = (precoNegociado * 0.025) + 140.75 + 290 + 335.52;
+          despEmplacamento = (precoNegociado * 0.0225) + 140.75 + 290 + 335.52;
           document.getElementById('custo_emplacamento').innerText = `${'.'.repeat(79)} R$ -${despEmplacamento.toFixed(2).replace('.', ',')}`;
           document.getElementById('receita_emplacamento').innerText = `${'.'.repeat(76)} R$ ${retornoEmplacamento.toFixed(2).replace('.', ',')}`;
 
         } else if (checkboxEmplacamento.checked && formaPagamento === "a_vista") {
-          despEmplacamento = (entradaReal * 0.025) + 140.75 + 290 + 227.08;
+          despEmplacamento = (entradaReal * 0.0225) + 140.75 + 290 + 227.08;
           document.getElementById('custo_emplacamento').innerText = `${'.'.repeat(79)} R$ -${despEmplacamento.toFixed(2).replace('.', ',')}`;
           document.getElementById('receita_emplacamento').innerText = `${'.'.repeat(76)} R$ ${retornoEmplacamento.toFixed(2).replace('.', ',')}`;
 
