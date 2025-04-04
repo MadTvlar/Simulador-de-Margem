@@ -218,7 +218,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
   let despesaFrete = 0;
   let receitaFrete = 0;
 
-
+  let comissao = 0;
   let retornoEmplacamento = 0;
   let retornoAcessorio = 0;
   let retornoBrinde = 0;
@@ -425,8 +425,15 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
             const margemLiquida = margemBruta - totalDespesas + totalReceitas;
             document.getElementById('resultado_liquido').innerText = `${'.'.repeat(88)} R$ ${margemLiquida.toFixed(2).replace('.', ',')}`;
 
-            const comissao = margemLiquida * 0.085;
-            document.getElementById('comissao').innerText = `${'.'.repeat(77)} R$ ${comissao.toFixed(2).replace('.', ',')}`
+            comissao = margemLiquida * 0.085;
+            if (comissao < 0) {
+              comissao = 0
+              document.getElementById('comissao').innerText = `${'.'.repeat(77)} R$ ${comissao.toFixed(2).replace('.', ',')}`
+
+            } else {
+              document.getElementById('comissao').innerText = `${'.'.repeat(77)} R$ ${comissao.toFixed(2).replace('.', ',')}`
+
+            }
 
           })
 
@@ -476,8 +483,15 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
           const margemLiquida = margemBruta - totalDespesas + totalReceitas;
           document.getElementById('resultado_liquido').innerText = `${'.'.repeat(88)} R$ ${margemLiquida.toFixed(2).replace('.', ',')}`;
 
-          const comissao = margemLiquida * 0.085;
-          document.getElementById('comissao').innerText = `${'.'.repeat(77)} R$ ${comissao.toFixed(2).replace('.', ',')}`
+          comissao = margemLiquida * 0.085;
+          if (comissao < 0) {
+            comissao = 0
+            document.getElementById('comissao').innerText = `${'.'.repeat(77)} R$ ${comissao.toFixed(2).replace('.', ',')}`
+
+          } else {
+            document.getElementById('comissao').innerText = `${'.'.repeat(77)} R$ ${comissao.toFixed(2).replace('.', ',')}`
+
+          }
         }
       }
     }).fail(function () {

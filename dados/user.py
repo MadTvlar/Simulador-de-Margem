@@ -71,6 +71,10 @@ usuarios = {
     "jamilla_fernandes": "Jamila123@",
     "paulo_lemos": "241428",
     "raimundo_silva": "245404",
+    "jackson_souza" : "Tvlar.123",
+    "lauany_silva" : "Tvlar.123",
+    "tassio_kevoley" : "Tvlar.123",
+
 
     #Tefé
     "larissa_martins": "101609",
