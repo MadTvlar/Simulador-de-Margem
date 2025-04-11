@@ -80,11 +80,11 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
 
     'Factor YBR 150 25-25': { #ÚLTIMA ALTERAÇÃO: 18/02/2025
         # MANAUS
-        'manaus_custo_produto': 14842.23,
+        'manaus_custo_produto': 15337.74,
         'manaus_pps': 0,
 
         # INTERIOR
-        'interior_custo_produto': 15305.38,
+        'interior_custo_produto': 15816.34,
         'interior_pps': 0,
 
         # GERAL
