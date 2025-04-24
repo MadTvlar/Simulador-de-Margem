@@ -41,11 +41,11 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
 
     'Crosser 150 Z ABS 25-25': { #ÚLTIMA ALTERAÇÃO: 18/02/2025
         # MANAUS
-        'manaus_custo_produto': 18582,
+        'manaus_custo_produto': 19077.50,
         'manaus_pps': 0,
 
         # INTERIOR
-        'interior_custo_produto': 19161.82,
+        'interior_custo_produto': 19672.77,
         'interior_pps': 0,
 
         # GERAL
