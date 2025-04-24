@@ -68,7 +68,6 @@ usuarios = {
     "guilherme_guacebe": "fabrisg1517",
 
     #Manacapuru
-    "jamilla_fernandes": "Jamila123@",
     "paulo_lemos": "241428",
     "raimundo_silva": "245404",
     "jackson_souza" : "Tvlar.123",
