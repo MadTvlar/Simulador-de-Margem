@@ -9,7 +9,7 @@ usuarios = {
 
 
     #Grande Circular
-    "jefferson_silva": "Yamaha@01",
+    "cleuson_silva": "Fazer0908@",
     "valdilene_ferreira": "062828",
     "cintia_silva": "Yamaha01",
     "leandro_silva": "Yamaha01",
