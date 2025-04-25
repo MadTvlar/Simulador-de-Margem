@@ -17,6 +17,7 @@ bancos = {
     "pan": "Pan",
     "santander": "Santander",
     "bradesco": "Bradesco",
+    "c6": "C6 Bank"
 }
 
 # Outras informações
