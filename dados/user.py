@@ -45,6 +45,7 @@ usuarios = {
     "ane_emanuela": "Tvl@r234",
     "juliete_santos": "Yamaha2804@",
     "marcos_viana": "Viana@25",
+    "carlos_paixao": "0837",
 
     
     #Cachoeirinha
