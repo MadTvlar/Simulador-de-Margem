@@ -145,11 +145,11 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
 
     'Fazer Fz15 ABS Connected 25-25': { #ULTIMA ALTERAÇÃO: __/__/__
         # MANAUS
-        'manaus_custo_produto': 17561.70,
+        'manaus_custo_produto': 18070.45,
         'manaus_pps': 0,
 
         # INTERIOR
-        'interior_custo_produto': 18112.25,
+        'interior_custo_produto': 18636.94,
         'interior_pps': 0,
 
         # GERAL
@@ -292,7 +292,7 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
         'manaus_pps': 0,
 
         # INTERIOR
-        'interior_custo_produto': 25004.58,
+        'interior_custo_produto': 25349.79,
         'interior_pps': 0,
 
         # GERAL
