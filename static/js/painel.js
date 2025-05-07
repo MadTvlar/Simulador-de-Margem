@@ -213,7 +213,6 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
   let custoProduto = 0;
 
 
-  let revisao = 0;
 
   let despesaFrete = 0;
   let receitaFrete = 0;
@@ -247,8 +246,6 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
       retornoAcessorio = valor;
     } else if (campo.id === 'retorno_brinde') {
       retornoBrinde = valor;
-    } else if (campo.id === 'revisao') {
-      revisao = valor;
     };
   });
 
@@ -343,7 +340,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
           document.getElementById('valor_venda_real').innerText = `Valor de Venda Real: ${'.'.repeat(81)} R$ ${valorVendaReal.toFixed(2).replace('.', ',')}`;
 
           const bancoRetorno = document.getElementById('banco_retorno').value.trim();
-          const resultBanco = precoNegociado - entradaReal - entradaBonificada + revisao;
+          const resultBanco = precoNegociado - entradaReal - entradaBonificada;
 
           resultadoBanco = resultBanco;
 
@@ -485,7 +482,7 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
           const totalDespesas = despOpeFinMkt + resultBrinde + despEmplacamento + despesaFrete + retornoAcessorio * 0.7;
           document.getElementById('resultado_despesas').innerText = `${'.'.repeat(84)} R$ -${totalDespesas.toFixed(2).replace('.', ',')}`;
 
-          const totalReceitas = retornoAcessorio + resultadoBanco + retornoEmplacamento + receitaFrete + revisao;
+          const totalReceitas = retornoAcessorio + resultadoBanco + retornoEmplacamento + receitaFrete;
           document.getElementById('resultado_receitas').innerText = `${'.'.repeat(86)} R$ ${totalReceitas.toFixed(2).replace('.', ',')}`;
 
           const margemLiquida = margemBruta - totalDespesas + totalReceitas;
@@ -511,7 +508,6 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
     $('#manaus_pps').text('');
     $('#interior_custo_produto').text('');
     $('#interior_pps').text('');
-    $('#revisao').text('');
   }
 
 });
