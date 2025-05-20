@@ -50,8 +50,8 @@ usuarios = {
     
     #Cachoeirinha
     "iara_cabral": "220621",
+    "katlen_gomes": "Carol@92",
     "sibliane_santos": "Tvlar123",
-    "soffia_castro": "Tvlar123",
     "nicole_anjos": "Tvlar123",
     "orielves_gomes": "364656",
     "maria_paredes": "",
