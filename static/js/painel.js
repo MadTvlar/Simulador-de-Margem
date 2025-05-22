@@ -300,17 +300,9 @@ document.getElementById('showCard4Button').addEventListener('click', function ()
 
 
 
-
         } else {
           $('#pps').text(`${'.'.repeat(80)} R$ ${data.interior_pps.toFixed(2).replace('.', ',')}`);
-
-
-          var factor = ["Factor YBR 125i ED 24-25", "Factor YBR 150 24-25", "Factor YBR 150 25-25", "Factor YBR 150 DX 24-25", "Factor YBR 150 DX 25-25", "Factor YBR 150 ED 24-24"];
-          if (factor.includes(motoSelecionada)) {
-            despesaFrete = 0;
-          } else {
-            despesaFrete = 600;
-          }
+          despesaFrete = 600;
 
         }
 
