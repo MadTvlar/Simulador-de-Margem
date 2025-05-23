@@ -63,7 +63,7 @@ usuarios = {
     "stefani_souza": "052025",
 
     #Itacoatiara
-    "dayane_muller": "181223",
+    "elisandra_cruz": "12345@",
 
     #Humaita
     "guilherme_guacebe": "fabrisg1517",
