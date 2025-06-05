@@ -351,6 +351,19 @@ motos = { #ULTIMA ALTERAÇÃO: __/__/__
         'revisao': 0,
     },
 
+    'MT-07 ABS 25-26': { #ULTIMA ALTERAÇÃO: 07/02/2025
+        # MANAUS
+        'manaus_custo_produto': 50615.31,
+        'manaus_pps': 0,
+
+        # INTERIOR
+        'interior_custo_produto': 53146.07,
+        'interior_pps': 0,
+
+        # GERAL
+        'revisao': 0,
+    },
+
     'MT-09 ABS 24-25': { #ULTIMA ALTERAÇÃO: 07/02/2025
         # MANAUS
         'manaus_custo_produto': 42250.26,
